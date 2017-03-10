@@ -3,7 +3,7 @@ Python enable us to perform advanced operation in very expressive way, meanwhile
 The following table is an important cheat sheet to memorize to keep your applications behave.
 [Python official page](https://wiki.python.org/moin/TimeComplexity)
 
-List
+## List
 
 |   Operation    | Average Case | Amortized Worst Case |
 | -------------- | ------------ | -------------------- |
@@ -24,8 +24,7 @@ List
 | min(s), max(s) | O(n)         |                      |
 | Get Length     | O(1)         | O(1)                 |
 
-
-collections.deque
+## collections.deque
 
 | Operation  | Average Case | Amortized Worst Case |
 | ---------- | ------------ | -------------------- |
@@ -39,8 +38,7 @@ collections.deque
 | rotate     | O(k)         | O(k)                 |
 | remove     | O(n)         | O(n)                 |
 
-
-set
+## set
 
 |             Operation             |                  Average case                 |     Worst Case     |                   notes                    |
 | --------------------------------- | --------------------------------------------- | ------------------ | ------------------------------------------ |
@@ -53,8 +51,7 @@ set
 | Symmetric Difference s^t          | O(len(s))                                     | O(len(s) * len(t)) |                                            |
 | s.symmetric_difference_update(t)  | O(len(t))                                     | O(len(t) * len(s)) |                                            |
 
-
-dict
+## dict
 
 |  Operation  | Average Case | Amortized Worst Case |
 | ----------- | ------------ | -------------------- |
