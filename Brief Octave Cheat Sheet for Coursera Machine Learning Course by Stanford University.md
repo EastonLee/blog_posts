@@ -72,6 +72,13 @@ Or use `disp(i);` or `sprintf(i)`
     ans =
         16  14  15  13
 
+    >> max(magic(4), [], 2) % return every row's max
+    ans =
+       16
+       11
+       12
+       15
+
     >> [val, ind] = max(magic(4)) % retuns every column's max and their index in corresponding column
     val =
         16  14  15  13
