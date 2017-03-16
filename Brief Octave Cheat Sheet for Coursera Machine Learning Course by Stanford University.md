@@ -18,12 +18,22 @@ Or use `disp(i);` or `sprintf(i)`
 
 # Matrix, Vector
 
+## Assignment
+
     % assign a matrix to A: 
     A = [1 2; 3 4; 5 6]
     A =
         1   2
         3   4
         5   6
+
+    % assign to second column
+    >> A(:,2) = [10 11 12]
+    % space, comma or semicolon doesn't matter here
+    >> A(:,2) = [10, 11, 12]
+    >> A(:,2) = [10; 11; 12]
+
+## Access
 
     % access A at first row and second column.
     >> A(1,2)
@@ -41,11 +51,19 @@ Or use `disp(i);` or `sprintf(i)`
         4
         6
 
-    % assign to second column
-    >> A(:,2) = [10 11 12]
-    % space, comma or semicolon doesn't matter here
-    >> A(:,2) = [10, 11, 12]
-    >> A(:,2) = [10; 11; 12]
+## Fill
+
+    >> A = ones(2, 3) # ones or zeros
+    A =
+       1   1   1
+       1   1   1
+
+    >> rand(2, 3)
+    ans =
+       0.47210   0.10022   0.35182
+       0.69316   0.71345   0.71179
+       
+## Concatenate
 
     >> B = [20 21; 22 23; 24 25]
     >> C = [A B] % concatenate A B horizontally
@@ -63,11 +81,14 @@ Or use `disp(i);` or `sprintf(i)`
         22  23
         24  25
 
+## Transpose
+
     >> A' % transpose
     ans =
         1   3   5
         2   4   6
 
+## Max, Min
     >> max(magic(4)) % return every column's max
     ans =
         16  14  15  13
@@ -98,14 +119,10 @@ Or use `disp(i);` or `sprintf(i)`
     ans =
         6
 
+## Sum
+
     >> sum(A) % sum of column
     >> sum(A, 2) % sum of row
-
-    >> flipud(A) $ flip matrix upside down
-    ans =
-        5   6
-        3   4
-        1   2
 
 ## Sum of diagonals in a square matrix
 
@@ -115,9 +132,24 @@ Or use `disp(i);` or `sprintf(i)`
     >> sum(sum(M.* flipud(eye(4) ))) % sum of diagonal bottom left to top right
     ans = 34
 
+## Flip
+
+    >> flipud(A) $ flip matrix upside down
+    ans =
+        5   6
+        3   4
+        1   2
+
 ## Matrix select
 
     A(A==2)
+
+## Reshape
+
+    >> reshape(A, 2, 3)
+    ans =
+       1   5   4
+       3   2   6
 
 # Functions & control statements
 
