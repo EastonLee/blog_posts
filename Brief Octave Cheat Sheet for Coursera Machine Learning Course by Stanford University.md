@@ -1,4 +1,4 @@
-I don't use Octave myself actually, instead I use R with Python, Octave is the chosen language in Coursera course: Machine Learning by Stanford University.
+I use R with Python a lot, Octave is the chosen language in Coursera course: Machine Learning by Stanford University.
 
 So this article will only cover necessary concept to finish Machine Learning course.
 
@@ -11,6 +11,20 @@ In Octave, matrix and vector are indexed from 1, which differs from many other l
 One line not ending with a semicolon will print the result to output, with semicolon with suppress that output.
 
 Or use `disp(i);` or `sprintf(i)`
+
+# String
+
+## Compare
+strcmp, strmatch
+
+# Cell-array
+
+## Acess
+
+    ca = cell(2,1); % create cell array
+    ca{1} = 'abc'; % assign to first element
+    ca{2} = 'def'; % assign to second element
+    ca{1}; % access first element
 
 # Range
 
@@ -50,6 +64,24 @@ Or use `disp(i);` or `sprintf(i)`
         2
         4
         6
+
+    a(2)       # result is a scalar
+    a(1:2)     # result is a row vector
+    a([1; 2])  # result is a column vector
+
+    a = [1, 2; 3, 4]
+    all of the following expressions are equivalent and select the first row of the matrix.
+
+    a(1, [1, 2])  # row 1, columns 1 and 2
+    a(1, 1:2)     # row 1, columns in range 1-2
+    a(1, :)       # row 1, all columns
+
+    a(1:end/2)        # first half of a => [1, 2]
+    a(end + 1) = 5;   # append element
+    a(end) = [];      # delete element
+    a(1:2:end)        # odd elements of a => [1, 3]
+    a(2:2:end)        # even elements of a => [2, 4]
+    a(end:-1:1)       # reversal of a => [4, 3, 2 , 1]
 
 ## Fill
 
@@ -155,14 +187,18 @@ Or use `disp(i);` or `sprintf(i)`
 
 Functions are saved in files with the file-ending .m for MATLAB. 
 
-    function y = function_name(x)
-        y = x^2;
+    function y = function_name(x1, ...
+        x2) % x2 is optional
+        if ~exist('x2', 'var') || isempty(x2)
+            x2 = 1;
+        end        
+        y = x1 + x2;
     % y is the return value
-    % x is a parameter
+    % x1 is a parameter
     % is also possible to return multiple values
-    function [y1, y2] = function_name(x)
-        y1 = x^2
-        y2 = x^3
+    function [y1, y2] = function_name(x1)
+        y1 = x1^2
+        y2 = x1^3
 
     >> for i=1:10
     >>      disp(i)
@@ -181,6 +217,10 @@ Functions are saved in files with the file-ending .m for MATLAB.
     >>      sprintf('no')
     >> endif
     ans = yes
+
+## Anonymous function
+
+    @(x1, x2) another_func(x1, x2) % anonymous function, just like Python lambda
 
 # Logic operations
 

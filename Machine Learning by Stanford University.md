@@ -212,6 +212,14 @@ Using the best combo Θ and λ, apply it on Jtest(Θ) to see if it has a good ge
 
 ### Error Analysis
 
+Accuracy = (true positives + true negatives) / (total examples)
+
+Precision = (true positives) / (true positives + false positives)
+
+Recall = (true positives) / (true positives + false negatives)
+
+F1 score = (2 * precision * recall) / (precision + recall)
+
 ## Handling Skewed Data
 
 ### Error Metrics for Skewed Classes
@@ -225,3 +233,82 @@ Using the best combo Θ and λ, apply it on Jtest(Θ) to see if it has a good ge
 ## Review
 
 ### Quiz: Machine Learning System Design5 questions
+
+TODO
+https://www.coursera.org/learn/machine-learning/exam/vrjOT/machine-learning-system-design
+
+# Week 7: Support Vector Machines
+
+Question: What is SVM for?
+
+
+## Large Margin Classification
+
+### Optimization Objective
+
+### Large Margin Intuition
+
+### Mathematics Behind Large Margin Classification
+
+## Kernels
+
+kernel refers to similarity function.
+
+### SVMs in Practice
+
+### Using An SVM
+
+Do not perform feature scaling before using the Gaussian kernel.
+
+Gaussian kernel, linear kernel.
+
+## Review
+
+### Quiz: Support Vector Machines5 questions
+
+### Programming Assignment: Support Vector Machines
+
+# Week 8
+
+## Unsupervised Learning
+
+### Clustering
+
+#### Unsupervised Learning: Introduction
+
+#### K-Means Algorithm
+
+#### Optimization Objective
+
+#### Random Initialization
+
+#### Choosing the Number of Clusters
+https://www.coursera.org/learn/machine-learning/exam/4sGmv/unsupervised-learning
+## Dimensionality Reduction
+
+###Motivation
+
+####Motivation I: Data Compression
+
+####Motivation II: Visualization
+
+###Principal Component Analysis
+
+####Principal Component Analysis Problem Formulation
+
+Preprocess is needed: Feature scaling and mean normalization
+
+####Principal Component Analysis Algorithm
+
+###Applying PCA
+
+####Reconstruction from Compressed Representation
+
+####Choosing the Number of Principal Components
+
+####Advice for Applying PCA
+
+###Review
+
+####Programming Assignment: K-Means Clustering and PCA
+
